@@ -21,6 +21,7 @@
   if (!launchedBefore) {
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"LaunchedBefore"];
     [self copyExample];
+    [self generateBlockerListJSON];
   }
   
   return YES;
@@ -61,8 +62,65 @@
   NSAssert(!targetExists, @"Example Folder already exists");
   if (!targetExists) {
     BOOL success = [fileManager copyItemAtPath:sourcePath toPath:targetPath error:nil];
-    NSAssert(!success, @"Could not copy Example Files over");
+    NSAssert(success, @"Could not copy Example Files over");
   }
+}
+
+- (void)generateBlockerListJSON {
+  NSMutableArray *lists = [NSMutableArray array];
+  
+  // iterate over blockerlist folder content
+  NSArray *arr = [[NSFileManager defaultManager] URLsForDirectory: NSDocumentDirectory inDomains: NSUserDomainMask];
+  NSURL *directoryURL = [arr firstObject];
+  directoryURL = [directoryURL URLByAppendingPathComponent:@"blockerList" isDirectory:YES];
+  
+  NSDirectoryEnumerator *enumerator = [[NSFileManager defaultManager]
+                                       enumeratorAtURL:directoryURL
+                                       includingPropertiesForKeys:@[NSURLIsDirectoryKey]
+                                       options:0
+                                       errorHandler:^(NSURL *url, NSError *error) {
+                                         // Return YES if the enumeration should continue after the error.
+                                         return YES;
+                                       }];
+  
+  for (NSURL *url in enumerator) {
+    NSError *error;
+    NSNumber *isDirectory = nil;
+    if (![url getResourceValue:&isDirectory forKey:NSURLIsDirectoryKey error:&error]) {
+      // handle error
+    } else if (![isDirectory boolValue]) {
+      // No error and it’s not a directory; do something with the file
+      if([[url pathExtension] isEqualToString:@"json"]) {
+        // load file
+        NSData *data = [NSData dataWithContentsOfURL:url];
+        NSError *jsonReadError;
+        NSArray *array = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&jsonReadError];
+        if (jsonReadError != nil) {
+          NSLog(@"Error: was not able to read %@.", url);
+          continue;
+        }
+        
+        // add rules
+        [lists addObject:array];
+      }
+    }
+  }
+  
+  
+  // save json
+  NSError *jsonWriteError;
+  NSData *jsonData = [NSJSONSerialization dataWithJSONObject:lists
+                                                     options:NSJSONWritingPrettyPrinted
+                                                       error:&jsonWriteError];
+  if (!jsonData) {
+    NSLog(@"Error writing generated JSON: %@", jsonWriteError.localizedDescription);
+  } else {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *targetPath = [documentsDirectory stringByAppendingPathComponent:@"/blockerList.json"];
+    [jsonData writeToFile:targetPath atomically:YES];
+  }
+  
 }
 
 @end
