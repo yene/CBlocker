@@ -18,6 +18,7 @@
 		AE26285E1B7F5C44001DDF06 /* ActionRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = AE26285D1B7F5C44001DDF06 /* ActionRequestHandler.m */; };
 		AE2628621B7F5C44001DDF06 /* Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = AE2628581B7F5C44001DDF06 /* Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		AE26286B1B7F67FA001DDF06 /* blockerList in Resources */ = {isa = PBXBuildFile; fileRef = AE26286A1B7F67FA001DDF06 /* blockerList */; };
+		AE26286D1B7F6F17001DDF06 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE26286C1B7F6F17001DDF06 /* SafariServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		AE26285F1B7F5C44001DDF06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE2628671B7F5C89001DDF06 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		AE26286A1B7F67FA001DDF06 /* blockerList */ = {isa = PBXFileReference; lastKnownFileType = folder; path = blockerList; sourceTree = SOURCE_ROOT; };
+		AE26286C1B7F6F17001DDF06 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE26286D1B7F6F17001DDF06 /* SafariServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +145,7 @@
 		AE26282E1B7F5AA9001DDF06 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AE26286C1B7F6F17001DDF06 /* SafariServices.framework */,
 				AE26282F1B7F5AA9001DDF06 /* main.m */,
 			);
 			name = "Supporting Files";

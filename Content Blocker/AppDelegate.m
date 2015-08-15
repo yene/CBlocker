@@ -21,9 +21,9 @@
   if (!launchedBefore) {
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"LaunchedBefore"];
     [self copyExample];
-    [self generateBlockerListJSON];
+    
   }
-  
+  [self generateBlockerListJSON];
   return YES;
 }
 
@@ -101,7 +101,9 @@
         }
         
         // add rules
-        [lists addObject:array];
+        for (NSDictionary *dict in array) {
+          [lists addObject:dict];
+        }
       }
     }
   }

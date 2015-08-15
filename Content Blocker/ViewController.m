@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <SafariServices/SafariServices.h>
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *sourceField;
@@ -16,6 +17,13 @@
 
 @implementation ViewController
 - (IBAction)update:(id)sender {
+  [SFContentBlockerManager reloadContentBlockerWithIdentifier:@"com.yannickweiss.Content-Blocker.Extension" completionHandler:^(NSError *error) {
+    if (error != nil) {
+      NSLog(@"Error: %@", error.localizedDescription);
+    } else {
+      NSLog(@"reloaded content blocker");
+    }
+  }];
 }
 
 - (void)viewDidLoad {
