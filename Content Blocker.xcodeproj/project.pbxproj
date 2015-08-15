@@ -70,6 +70,7 @@
 		AE26285C1B7F5C44001DDF06 /* ActionRequestHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionRequestHandler.h; sourceTree = "<group>"; };
 		AE26285D1B7F5C44001DDF06 /* ActionRequestHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActionRequestHandler.m; sourceTree = "<group>"; };
 		AE26285F1B7F5C44001DDF06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE2628671B7F5C89001DDF06 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +101,7 @@
 		AE2628221B7F5AA9001DDF06 = {
 			isa = PBXGroup;
 			children = (
+				AE2628671B7F5C89001DDF06 /* LICENSE */,
 				AE2628531B7F5B87001DDF06 /* README.md */,
 				AE26282D1B7F5AA9001DDF06 /* Content Blocker */,
 				AE2628471B7F5AA9001DDF06 /* Content BlockerTests */,

@@ -11,5 +11,6 @@ It grabs all the JSON files from Github repo and combines them into a filter lis
 - [] inform user that he has to toggle content blocker in settings
 
 
-## Maybe Laster
+## Maybe Later
 - [] inform user that there is an update in the github repo (notification?)
+- [] add support for direct download of json and zip
