@@ -88,6 +88,8 @@
     [dateFormatter setTimeStyle:NSDateFormatterNoStyle];
     NSString *formattedDateString = [dateFormatter stringFromDate:lastUpdate];
     self.lastUpdateLabel.text = [@"Last Updated: " stringByAppendingString:formattedDateString];
+  } else {
+    self.lastUpdateLabel.text = @"";
   }
 }
 
