@@ -23,7 +23,7 @@
     [self copyExample];
     
   }
-  [self generateBlockerListJSON];
+  [AppDelegate generateBlockerListJSON];
   return YES;
 }
 
@@ -66,7 +66,7 @@
   }
 }
 
-- (void)generateBlockerListJSON {
++ (void)generateBlockerListJSON {
   NSMutableArray *lists = [NSMutableArray array];
   
   // iterate over blockerlist folder content

@@ -19,6 +19,12 @@
 		AE2628621B7F5C44001DDF06 /* Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = AE2628581B7F5C44001DDF06 /* Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		AE26286B1B7F67FA001DDF06 /* blockerList in Resources */ = {isa = PBXBuildFile; fileRef = AE26286A1B7F67FA001DDF06 /* blockerList */; };
 		AE26286D1B7F6F17001DDF06 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE26286C1B7F6F17001DDF06 /* SafariServices.framework */; };
+		AEC18B771B7FBF6D008463BB /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC18B761B7FBF6D008463BB /* libz.tbd */; };
+		AEC18B8E1B7FC3E2008463BB /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC18B8D1B7FC3E2008463BB /* SSZipArchive.m */; };
+		AEC18B991B7FC3E8008463BB /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = AEC18B911B7FC3E8008463BB /* ioapi.c */; };
+		AEC18B9A1B7FC3E8008463BB /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = AEC18B931B7FC3E8008463BB /* mztools.c */; };
+		AEC18B9B1B7FC3E8008463BB /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = AEC18B951B7FC3E8008463BB /* unzip.c */; };
+		AEC18B9C1B7FC3E8008463BB /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = AEC18B971B7FC3E8008463BB /* zip.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +83,18 @@
 		AE26286C1B7F6F17001DDF06 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		AE26286E1B7F9F34001DDF06 /* Content Blocker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Content Blocker.entitlements"; sourceTree = "<group>"; };
 		AE26286F1B7FACA6001DDF06 /* Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Extension.entitlements; sourceTree = "<group>"; };
+		AEC18B761B7FBF6D008463BB /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		AEC18B8C1B7FC3E2008463BB /* SSZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipArchive.h; sourceTree = "<group>"; };
+		AEC18B8D1B7FC3E2008463BB /* SSZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSZipArchive.m; sourceTree = "<group>"; };
+		AEC18B901B7FC3E8008463BB /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
+		AEC18B911B7FC3E8008463BB /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
+		AEC18B921B7FC3E8008463BB /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
+		AEC18B931B7FC3E8008463BB /* mztools.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mztools.c; sourceTree = "<group>"; };
+		AEC18B941B7FC3E8008463BB /* mztools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mztools.h; sourceTree = "<group>"; };
+		AEC18B951B7FC3E8008463BB /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
+		AEC18B961B7FC3E8008463BB /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
+		AEC18B971B7FC3E8008463BB /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
+		AEC18B981B7FC3E8008463BB /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEC18B771B7FBF6D008463BB /* libz.tbd in Frameworks */,
 				AE26286D1B7F6F17001DDF06 /* SafariServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,6 +165,10 @@
 		AE26282E1B7F5AA9001DDF06 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AEC18B8C1B7FC3E2008463BB /* SSZipArchive.h */,
+				AEC18B8D1B7FC3E2008463BB /* SSZipArchive.m */,
+				AEC18B8F1B7FC3E8008463BB /* minizip */,
+				AEC18B761B7FBF6D008463BB /* libz.tbd */,
 				AE2628671B7F5C89001DDF06 /* LICENSE */,
 				AE26286E1B7F9F34001DDF06 /* Content Blocker.entitlements */,
 				AE26286C1B7F6F17001DDF06 /* SafariServices.framework */,
@@ -173,6 +196,22 @@
 				AE26285F1B7F5C44001DDF06 /* Info.plist */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		AEC18B8F1B7FC3E8008463BB /* minizip */ = {
+			isa = PBXGroup;
+			children = (
+				AEC18B901B7FC3E8008463BB /* crypt.h */,
+				AEC18B911B7FC3E8008463BB /* ioapi.c */,
+				AEC18B921B7FC3E8008463BB /* ioapi.h */,
+				AEC18B931B7FC3E8008463BB /* mztools.c */,
+				AEC18B941B7FC3E8008463BB /* mztools.h */,
+				AEC18B951B7FC3E8008463BB /* unzip.c */,
+				AEC18B961B7FC3E8008463BB /* unzip.h */,
+				AEC18B971B7FC3E8008463BB /* zip.c */,
+				AEC18B981B7FC3E8008463BB /* zip.h */,
+			);
+			path = minizip;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,9 +358,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEC18B8E1B7FC3E2008463BB /* SSZipArchive.m in Sources */,
+				AEC18B9C1B7FC3E8008463BB /* zip.c in Sources */,
+				AEC18B9B1B7FC3E8008463BB /* unzip.c in Sources */,
 				AE2628361B7F5AA9001DDF06 /* ViewController.m in Sources */,
+				AEC18B9A1B7FC3E8008463BB /* mztools.c in Sources */,
 				AE2628331B7F5AA9001DDF06 /* AppDelegate.m in Sources */,
 				AE2628301B7F5AA9001DDF06 /* main.m in Sources */,
+				AEC18B991B7FC3E8008463BB /* ioapi.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,6 +603,7 @@
 				AE26284F1B7F5AA9001DDF06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AE2628501B7F5AA9001DDF06 /* Build configuration list for PBXNativeTarget "Content BlockerTests" */ = {
 			isa = XCConfigurationList;
@@ -567,6 +612,7 @@
 				AE2628521B7F5AA9001DDF06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AE2628631B7F5C44001DDF06 /* Build configuration list for PBXNativeTarget "Extension" */ = {
 			isa = XCConfigurationList;
@@ -575,6 +621,7 @@
 				AE2628651B7F5C44001DDF06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
