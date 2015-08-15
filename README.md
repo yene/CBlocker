@@ -1,6 +1,7 @@
 # Content Blocker for iOS
 This app lets you use a github repository as the source for Safaris Content Blocker. Please fork [https://github.com/yene/blockerList](https://github.com/yene/blockerList) and add your own filters. Don't forget to enable the Content Blocker inside Safaris settings.
-![screenshot](screenshots/v1.png) ![settings](screenshots/settings.png)
+
+![screenshot](screenshots/v1.png)![settings](screenshots/settings.png)
 
 ## Todo
 - [X] on first run copy example blockerList from bundle to temporary
