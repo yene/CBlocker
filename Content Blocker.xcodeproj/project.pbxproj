@@ -40,6 +40,7 @@
 		AE2628441B7F5AA9001DDF06 /* Content BlockerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Content BlockerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE2628481B7F5AA9001DDF06 /* Content_BlockerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Content_BlockerTests.m; sourceTree = "<group>"; };
 		AE26284A1B7F5AA9001DDF06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE2628531B7F5B87001DDF06 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +64,7 @@
 		AE2628221B7F5AA9001DDF06 = {
 			isa = PBXGroup;
 			children = (
+				AE2628531B7F5B87001DDF06 /* README.md */,
 				AE26282D1B7F5AA9001DDF06 /* Content Blocker */,
 				AE2628471B7F5AA9001DDF06 /* Content BlockerTests */,
 				AE26282C1B7F5AA9001DDF06 /* Products */,
