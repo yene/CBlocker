@@ -16,7 +16,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  // Override point for customization after application launch.
+  // On first run copy the example data from bundle to the temporary location
+  BOOL launchedBefore = [[NSUserDefaults standardUserDefaults] boolForKey:@"LaunchedBefore"];
+  if (!launchedBefore) {
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"LaunchedBefore"];
+    [self copyExample];
+  }
+  
   return YES;
 }
 
@@ -40,6 +46,23 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
   // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)copyExample {
+  NSString *sourcePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"/blockerList"];
+  NSFileManager *fileManager = [NSFileManager defaultManager];
+  BOOL sourceExists = [fileManager fileExistsAtPath:sourcePath];
+  NSAssert(sourceExists, @"Example Folder is not added to the project");
+  
+  NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+  NSString *documentsDirectory = [paths objectAtIndex:0];
+  NSString *targetPath = [documentsDirectory stringByAppendingPathComponent:@"/blockerList"];
+  BOOL targetExists = [fileManager fileExistsAtPath:targetPath];
+  NSAssert(!targetExists, @"Example Folder already exists");
+  if (!targetExists) {
+    BOOL success = [fileManager copyItemAtPath:sourcePath toPath:targetPath error:nil];
+    NSAssert(!success, @"Could not copy Example Files over");
+  }
 }
 
 @end
