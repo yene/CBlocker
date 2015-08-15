@@ -15,12 +15,18 @@
 @implementation ActionRequestHandler
 
 - (void)beginRequestWithExtensionContext:(NSExtensionContext *)context {
-    NSItemProvider *attachment = [[NSItemProvider alloc] initWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"blockerList" withExtension:@"json"]];
-    
-    NSExtensionItem *item = [[NSExtensionItem alloc] init];
-    item.attachments = @[attachment];
-    
-    [context completeRequestReturningItems:@[item] completionHandler:nil];
+  // grab the json file from the shared group directory
+  NSURL *groupURL = [[NSFileManager defaultManager]
+                     containerURLForSecurityApplicationGroupIdentifier:
+                     @"group.com.yannickweiss.Content-Blocker"];
+  NSURL *blockerList = [groupURL URLByAppendingPathComponent:@"blockerList.json"];
+  
+  NSItemProvider *attachment = [[NSItemProvider alloc] initWithContentsOfURL:blockerList];
+  
+  NSExtensionItem *item = [[NSExtensionItem alloc] init];
+  item.attachments = @[attachment];
+  
+  [context completeRequestReturningItems:@[item] completionHandler:nil];
 }
 
 @end

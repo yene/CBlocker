@@ -117,10 +117,12 @@
   if (!jsonData) {
     NSLog(@"Error writing generated JSON: %@", jsonWriteError.localizedDescription);
   } else {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *targetPath = [documentsDirectory stringByAppendingPathComponent:@"/blockerList.json"];
-    [jsonData writeToFile:targetPath atomically:YES];
+    // save the json file to the shared group directory
+    NSURL *groupURL = [[NSFileManager defaultManager]
+                       containerURLForSecurityApplicationGroupIdentifier:
+                       @"group.com.yannickweiss.Content-Blocker"];
+    NSURL *blockerList = [groupURL URLByAppendingPathComponent:@"blockerList.json"];
+    [jsonData writeToURL:blockerList atomically:YES];
   }
   
 }

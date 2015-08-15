@@ -72,9 +72,11 @@
 		AE26285C1B7F5C44001DDF06 /* ActionRequestHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionRequestHandler.h; sourceTree = "<group>"; };
 		AE26285D1B7F5C44001DDF06 /* ActionRequestHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActionRequestHandler.m; sourceTree = "<group>"; };
 		AE26285F1B7F5C44001DDF06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AE2628671B7F5C89001DDF06 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		AE2628671B7F5C89001DDF06 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		AE26286A1B7F67FA001DDF06 /* blockerList */ = {isa = PBXFileReference; lastKnownFileType = folder; path = blockerList; sourceTree = SOURCE_ROOT; };
 		AE26286C1B7F6F17001DDF06 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		AE26286E1B7F9F34001DDF06 /* Content Blocker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Content Blocker.entitlements"; sourceTree = "<group>"; };
+		AE26286F1B7FACA6001DDF06 /* Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Extension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +108,6 @@
 		AE2628221B7F5AA9001DDF06 = {
 			isa = PBXGroup;
 			children = (
-				AE2628671B7F5C89001DDF06 /* LICENSE */,
 				AE2628531B7F5B87001DDF06 /* README.md */,
 				AE26282D1B7F5AA9001DDF06 /* Content Blocker */,
 				AE2628471B7F5AA9001DDF06 /* Content BlockerTests */,
@@ -145,6 +146,8 @@
 		AE26282E1B7F5AA9001DDF06 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AE2628671B7F5C89001DDF06 /* LICENSE */,
+				AE26286E1B7F9F34001DDF06 /* Content Blocker.entitlements */,
 				AE26286C1B7F6F17001DDF06 /* SafariServices.framework */,
 				AE26282F1B7F5AA9001DDF06 /* main.m */,
 			);
@@ -163,6 +166,7 @@
 		AE2628591B7F5C44001DDF06 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				AE26286F1B7FACA6001DDF06 /* Extension.entitlements */,
 				AE26285A1B7F5C44001DDF06 /* blockerList.json */,
 				AE26285C1B7F5C44001DDF06 /* ActionRequestHandler.h */,
 				AE26285D1B7F5C44001DDF06 /* ActionRequestHandler.m */,
@@ -239,6 +243,12 @@
 				TargetAttributes = {
 					AE26282A1B7F5AA9001DDF06 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = NDJHDNKXD6;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					AE2628431B7F5AA9001DDF06 = {
 						CreatedOnToolsVersion = 7.0;
@@ -246,6 +256,12 @@
 					};
 					AE2628571B7F5C44001DDF06 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = NDJHDNKXD6;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -444,10 +460,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Content Blocker/Content Blocker.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Content Blocker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yannickweiss.Content-Blocker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -455,10 +475,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Content Blocker/Content Blocker.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Content Blocker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yannickweiss.Content-Blocker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -489,10 +513,14 @@
 		AE2628641B7F5C44001DDF06 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Extension/Extension.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Extension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yannickweiss.Content-Blocker.Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -500,10 +528,14 @@
 		AE2628651B7F5C44001DDF06 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Extension/Extension.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Extension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yannickweiss.Content-Blocker.Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
