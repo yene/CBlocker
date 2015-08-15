@@ -9,14 +9,20 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *sourceField;
+@property (weak, nonatomic) IBOutlet UILabel *lastUpdateLabel;
 
 @end
 
 @implementation ViewController
+- (IBAction)update:(id)sender {
+}
 
 - (void)viewDidLoad {
   [super viewDidLoad];
   // Do any additional setup after loading the view, typically from a nib.
+  self.sourceField.text = @"https://github.com/yene/blockerList";
+  self.lastUpdateLabel.text = @"Last Updated: 14. August 2015";
 }
 
 - (void)didReceiveMemoryWarning {

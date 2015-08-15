@@ -23,14 +23,14 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Updated: 14. August" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cls-OD-Uo5">
-                                <rect key="frame" x="204" y="191" width="193" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cls-OD-Uo5">
+                                <rect key="frame" x="301" y="191" width="0.0" height="0.0"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="github.com/yene/JSON" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eaf-j8-xC8">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eaf-j8-xC8">
                                 <rect key="frame" x="195" y="102" width="210" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -40,6 +40,9 @@
                                 <rect key="frame" x="218" y="401" width="165" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Update Content Blocker"/>
+                                <connections>
+                                    <action selector="update:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nw8-Ek-HBU"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -56,6 +59,10 @@
                             <constraint firstItem="eaf-j8-xC8" firstAttribute="top" secondItem="2ob-X9-Fck" secondAttribute="bottom" constant="29" id="xMA-2a-nFd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lastUpdateLabel" destination="Cls-OD-Uo5" id="1kC-Zz-9r1"/>
+                        <outlet property="sourceField" destination="eaf-j8-xC8" id="48O-tU-tDY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
