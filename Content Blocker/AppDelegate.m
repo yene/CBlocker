@@ -25,21 +25,21 @@
     
   }
   
-  if (YES) { // for debugging, builds the list on startup
-    [self copyExample]
-    
-    [AppDelegate generateBlockerListJSON];
-    
-    [SFContentBlockerManager reloadContentBlockerWithIdentifier:@"com.yannickweiss.Content-Blocker.Extension" completionHandler:^(NSError *error) {
-      if (error != nil) {
-        NSLog(@"Error: %@", error.localizedDescription);
-      } else {
-        NSLog(@"reloaded content blocker");
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.google.com"]];
-      }
-    }];
-  }
+#if 0 // for debugging, builds the list on startup
+  [self copyExample];
   
+  [AppDelegate generateBlockerListJSON];
+  
+  [SFContentBlockerManager reloadContentBlockerWithIdentifier:@"com.yannickweiss.Content-Blocker.Extension" completionHandler:^(NSError *error) {
+    if (error != nil) {
+      NSLog(@"Error: %@", error.localizedDescription);
+    } else {
+      NSLog(@"reloaded content blocker");
+      [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.google.com"]];
+    }
+  }];
+#endif
+
   return YES;
 }
 
