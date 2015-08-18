@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <SafariServices/SafariServices.h>
 
 @interface AppDelegate ()
 
@@ -23,7 +24,22 @@
     [self copyExample];
     
   }
-  [AppDelegate generateBlockerListJSON];
+  
+  if (YES) { // for debugging, builds the list on startup
+    [self copyExample]
+    
+    [AppDelegate generateBlockerListJSON];
+    
+    [SFContentBlockerManager reloadContentBlockerWithIdentifier:@"com.yannickweiss.Content-Blocker.Extension" completionHandler:^(NSError *error) {
+      if (error != nil) {
+        NSLog(@"Error: %@", error.localizedDescription);
+      } else {
+        NSLog(@"reloaded content blocker");
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.google.com"]];
+      }
+    }];
+  }
+  
   return YES;
 }
 
@@ -59,11 +75,13 @@
   NSString *documentsDirectory = [paths objectAtIndex:0];
   NSString *targetPath = [documentsDirectory stringByAppendingPathComponent:@"/blockerList"];
   BOOL targetExists = [fileManager fileExistsAtPath:targetPath];
-  NSAssert(!targetExists, @"Example Folder already exists");
-  if (!targetExists) {
-    BOOL success = [fileManager copyItemAtPath:sourcePath toPath:targetPath error:nil];
-    NSAssert(success, @"Could not copy Example Files over");
+  if (targetExists) {
+    [fileManager removeItemAtPath:targetPath error:nil];
   }
+  
+  BOOL success = [fileManager copyItemAtPath:sourcePath toPath:targetPath error:nil];
+  NSAssert(success, @"Could not copy Example Files over");
+  
 }
 
 + (void)generateBlockerListJSON {

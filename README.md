@@ -15,6 +15,7 @@ This app lets you use a github repository as the source for Safaris Content Bloc
 - [ ] remove duplicates in blockList
 - [ ] add icons and artwork
 - [ ] add blockerList as submodule
+- [ ] Rename content blocker to something better
 
 ## Maybe Later
 - [ ] inform user that there is an update in the github repo (notification?)
