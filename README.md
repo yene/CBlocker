@@ -26,3 +26,7 @@ This app lets you use a github repository as the source for Safaris Content Bloc
 
 ## Links
 * https://www.hackingwithswift.com/safari-content-blocking-ios9
+* https://easylist.adblockplus.org/de/
+* https://www.webkit.org/blog/3476/content-blockers-first-look/
+* https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewInSafari/Articles/Safari_9.html
+* https://developer.apple.com/videos/wwdc/2015/?id=511
