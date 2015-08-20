@@ -6,7 +6,7 @@
         "trigger": {
             "url-filter": ".*",
             "resource-type": ["script"],
-            "load-type": ["third-party"],
+            "load-type": ["third-party"]
         }
     }
 ]
