@@ -40,3 +40,6 @@ An updated version of the blockerList folder can be found under [github.com/yene
 ## Example Sites with many Ads
 * macrumors.com
 * imore.com
+
+## Original Repository
+https://github.com/yene/Content-Blocker
