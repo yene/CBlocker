@@ -1,7 +1,7 @@
 # Content Blocker for iOS
 This app lets you use a github repository as the source for Safaris Content Blocker. Please fork [https://github.com/yene/blockerList](https://github.com/yene/blockerList) and add your own filters. Don't forget to enable the Content Blocker inside Safaris settings.
 
-![screenshot](screenshots/v1.png)![settings](screenshots/settings.png)
+![screenshot](screenshots/v2.png)![settings](screenshots/settings.png)
 
 ## blockerList
 An updated version of the blockerList folder can be found under [github.com/yene/blockerList](https://github.com/yene/blockerList).
@@ -35,6 +35,8 @@ An updated version of the blockerList folder can be found under [github.com/yene
 * https://www.webkit.org/blog/3476/content-blockers-first-look/
 * https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewInSafari/Articles/Safari_9.html
 * https://developer.apple.com/videos/wwdc/2015/?id=511
+* https://gist.github.com/CraftyDeano/777579c628b3d8d50f25
 
 ## Example Sites with many Ads
 * macrumors.com
+* imore.com
