@@ -6,7 +6,7 @@ This app lets you use your own filter list (called blockerList.json) in Safari. 
 ## blockerList
 An updated version of the blockerList folder can be found under [github.com/yene/blockerList](https://github.com/yene/blockerList).
 
-## HARDCORE block all the scripts
+## HARDCORE: block all 3. party scripts
 You can use this JSON file as source and it will block all external scripts. [blockThirdParty.json](blockThirdParty.json)
 
 ## Todo
