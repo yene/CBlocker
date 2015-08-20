@@ -21,8 +21,8 @@
 - (IBAction)report:(id)sender {
   MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
   mc.mailComposeDelegate = self;
-  [mc setSubject:@"Please look at this site and block scripts/hide ads."];
-  [mc setMessageBody:@"The following is so annoying:\n * " isHTML:NO];
+  [mc setSubject:@"Please look at this site."];
+  [mc setMessageBody:@"Block the following:\n * " isHTML:NO];
   [mc setToRecipients:@[@"block@yannickweiss.com"]];
   [self presentViewController:mc animated:YES completion:NULL];
 }
@@ -35,6 +35,7 @@
 
 
 - (IBAction)update:(id)sender {
+  [self.sourceField resignFirstResponder];
   NSString *source = self.sourceField.text;
   [[NSUserDefaults standardUserDefaults] setObject:source forKey:@"source"];
   
@@ -64,6 +65,17 @@
       NSURL *blockerList = [groupURL URLByAppendingPathComponent:@"blockerList.json"];
       [urlData writeToURL:blockerList atomically:YES];
       [[self class] reloadExtension];
+    } else {
+      UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Error"
+                                                                     message:@"Could not download JSON file."
+                                                              preferredStyle:UIAlertControllerStyleAlert];
+      UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                            handler:nil];
+      
+      [alert addAction:defaultAction];
+      dispatch_async(dispatch_get_main_queue(), ^{
+        [self presentViewController:alert animated:YES completion:nil];
+      });
     }
   });
 }
@@ -97,7 +109,16 @@
       
       [[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:@"LastUpdate"];
     } else {
-      NSLog(@"could not download ZIP");
+      UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Error"
+                                                                     message:@"Could not download ZIP file."
+                                                              preferredStyle:UIAlertControllerStyleAlert];
+      UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                            handler:nil];
+      
+      [alert addAction:defaultAction];
+      dispatch_async(dispatch_get_main_queue(), ^{
+        [self presentViewController:alert animated:YES completion:nil];
+      });
     }
     
     [[self class] reloadExtension];
@@ -141,6 +162,10 @@
 - (void)didReceiveMemoryWarning {
   [super didReceiveMemoryWarning];
   // Dispose of any resources that can be recreated.
+}
+
+-(IBAction)removeKeyboard {
+  [self.sourceField resignFirstResponder];
 }
 
 @end

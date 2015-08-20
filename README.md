@@ -16,13 +16,14 @@ An updated version of the blockerList folder can be found under [github.com/yene
 - [ ] inform user that he has to toggle content blocker in settings
 - [X] Write the data to shared folder
 - [ ] remove duplicates in blockList
-- [ ] add icons and artwork
+- [X] add icons and artwork
 - [ ] add blockerList as submodule
 - [ ] Rename content blocker to something better
+- [ ] show a spinner
 
 ## Maybe Later
 - [ ] inform user that there is an update in the github repo (notification?)
-- [ ] add support for direct download of json and zip
+- [X] add support for direct download of json and zip
 
 ## Questions
 * Do i have to toggle the settings or is reload enough? calling reload is enough
