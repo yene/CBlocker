@@ -36,6 +36,9 @@
 
 - (IBAction)update:(id)sender {
   NSString *source = self.sourceField.text;
+  [[NSUserDefaults standardUserDefaults] setObject:source forKey:@"source"];
+  
+  
   source = [source stringByReplacingOccurrencesOfString:@"https://" withString:@""];
   // Example Format: https://github.com/yene/spyfall/archive/master.zip
   NSString *downloadZIP = [NSString stringWithFormat:@"https://%@/%@", source, @"archive/master.zip"]; // could have double // in name
@@ -96,7 +99,12 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   // Do any additional setup after loading the view, typically from a nib.
-  self.sourceField.text = @"https://github.com/yene/blockerList";
+  NSString *source = [[NSUserDefaults standardUserDefaults] objectForKey:@"source"];
+  if (!source) {
+    source = @"https://github.com/yene/blockerList";
+  }
+  
+  self.sourceField.text = source;
   NSDate *lastUpdate = [[NSUserDefaults standardUserDefaults] objectForKey:@"LastUpdate"];
   if (lastUpdate != nil) {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
