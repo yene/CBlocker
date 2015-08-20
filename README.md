@@ -1,10 +1,13 @@
 # Content Blocker for iOS
-This app lets you use a github repository as the source for Safaris Content Blocker. Please fork [https://github.com/yene/blockerList](https://github.com/yene/blockerList) and add your own filters. Don't forget to enable the Content Blocker inside Safaris settings.
+This app lets you use your own filter list (called blockerList.json) in Safari. You can fork and extend [https://github.com/yene/blockerList](https://github.com/yene/blockerList). Don't forget to enable the Content Blocker inside Safaris settings.
 
 ![screenshot](screenshots/v2.png)![settings](screenshots/settings.png)
 
 ## blockerList
 An updated version of the blockerList folder can be found under [github.com/yene/blockerList](https://github.com/yene/blockerList).
+
+## HARDCORE block all the scripts
+You can use this JSON file as source and it will block all external scripts. [blockThirdParty.json](blockThirdParty.json)
 
 ## Todo
 - [X] on first run copy example blockerList from bundle to temporary
