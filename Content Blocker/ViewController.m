@@ -18,6 +18,22 @@
 @end
 
 @implementation ViewController
+- (IBAction)report:(id)sender {
+  MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+  mc.mailComposeDelegate = self;
+  [mc setSubject:@"Please look at this site and block scripts/hide ads."];
+  [mc setMessageBody:@"The following is so annoying:\n * " isHTML:NO];
+  [mc setToRecipients:@[@"block@yannickweiss.com"]];
+  [self presentViewController:mc animated:YES completion:NULL];
+}
+
+#pragma mark Mail Delegate
+- (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+  [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+
 - (IBAction)update:(id)sender {
   NSString *source = self.sourceField.text;
   source = [source stringByReplacingOccurrencesOfString:@"https://" withString:@""];

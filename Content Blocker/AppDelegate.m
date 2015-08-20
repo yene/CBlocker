@@ -25,7 +25,7 @@
     
   }
   
-#if 0 // for debugging, builds the list on startup
+#if 1 // for debugging, builds the list on startup
   [self copyExample];
   
   [AppDelegate generateBlockerListJSON];

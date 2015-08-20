@@ -34,3 +34,6 @@ An updated version of the blockerList folder can be found under [github.com/yene
 * https://www.webkit.org/blog/3476/content-blockers-first-look/
 * https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewInSafari/Articles/Safari_9.html
 * https://developer.apple.com/videos/wwdc/2015/?id=511
+
+## Example Sites with many Ads
+* macrumors.com

@@ -19,6 +19,8 @@
 		AE2628621B7F5C44001DDF06 /* Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = AE2628581B7F5C44001DDF06 /* Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		AE26286B1B7F67FA001DDF06 /* blockerList in Resources */ = {isa = PBXBuildFile; fileRef = AE26286A1B7F67FA001DDF06 /* blockerList */; };
 		AE26286D1B7F6F17001DDF06 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE26286C1B7F6F17001DDF06 /* SafariServices.framework */; };
+		AE4FDE0E1B85D84B002AC9AE /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE4FDE0D1B85D84B002AC9AE /* MessageUI.framework */; };
+		AE4FDE101B85D8A4002AC9AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE4FDE0F1B85D8A4002AC9AE /* UIKit.framework */; };
 		AEC18B771B7FBF6D008463BB /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC18B761B7FBF6D008463BB /* libz.tbd */; };
 		AEC18B8E1B7FC3E2008463BB /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC18B8D1B7FC3E2008463BB /* SSZipArchive.m */; };
 		AEC18B991B7FC3E8008463BB /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = AEC18B911B7FC3E8008463BB /* ioapi.c */; };
@@ -83,6 +85,8 @@
 		AE26286C1B7F6F17001DDF06 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		AE26286E1B7F9F34001DDF06 /* Content Blocker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Content Blocker.entitlements"; sourceTree = "<group>"; };
 		AE26286F1B7FACA6001DDF06 /* Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Extension.entitlements; sourceTree = "<group>"; };
+		AE4FDE0D1B85D84B002AC9AE /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		AE4FDE0F1B85D8A4002AC9AE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AEC18B761B7FBF6D008463BB /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		AEC18B8C1B7FC3E2008463BB /* SSZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipArchive.h; sourceTree = "<group>"; };
 		AEC18B8D1B7FC3E2008463BB /* SSZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSZipArchive.m; sourceTree = "<group>"; };
@@ -102,6 +106,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE4FDE101B85D8A4002AC9AE /* UIKit.framework in Frameworks */,
+				AE4FDE0E1B85D84B002AC9AE /* MessageUI.framework in Frameworks */,
 				AEC18B771B7FBF6D008463BB /* libz.tbd in Frameworks */,
 				AE26286D1B7F6F17001DDF06 /* SafariServices.framework in Frameworks */,
 			);
@@ -165,13 +171,15 @@
 		AE26282E1B7F5AA9001DDF06 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AE26286C1B7F6F17001DDF06 /* SafariServices.framework */,
+				AE4FDE0F1B85D8A4002AC9AE /* UIKit.framework */,
+				AE4FDE0D1B85D84B002AC9AE /* MessageUI.framework */,
 				AEC18B8C1B7FC3E2008463BB /* SSZipArchive.h */,
 				AEC18B8D1B7FC3E2008463BB /* SSZipArchive.m */,
 				AEC18B8F1B7FC3E8008463BB /* minizip */,
 				AEC18B761B7FBF6D008463BB /* libz.tbd */,
 				AE2628671B7F5C89001DDF06 /* LICENSE */,
 				AE26286E1B7F9F34001DDF06 /* Content Blocker.entitlements */,
-				AE26286C1B7F6F17001DDF06 /* SafariServices.framework */,
 				AE26282F1B7F5AA9001DDF06 /* main.m */,
 			);
 			name = "Supporting Files";

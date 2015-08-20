@@ -20,18 +20,18 @@
                                 <rect key="frame" x="137" y="28" width="326" height="27"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="326" id="saS-qd-xBK"/>
+                                    <constraint firstAttribute="width" constant="326" id="Tup-DS-Q1f"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="test" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cls-OD-Uo5">
-                                <rect key="frame" x="181" y="550" width="238" height="30"/>
+                                <rect key="frame" x="181" y="208" width="238" height="30"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Mbc-l5-TdE"/>
-                                    <constraint firstAttribute="width" constant="238" id="xac-Ib-ieN"/>
+                                    <constraint firstAttribute="height" constant="30" id="7L8-tR-Dsm"/>
+                                    <constraint firstAttribute="width" constant="238" id="ots-1g-1SH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -47,8 +47,8 @@
                                 <rect key="frame" x="183" y="63" width="235" height="53"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="53" id="RUI-5h-O3X"/>
-                                    <constraint firstAttribute="width" constant="235" id="jsX-LO-0lq"/>
+                                    <constraint firstAttribute="width" constant="235" id="7Fb-ye-1e7"/>
+                                    <constraint firstAttribute="height" constant="53" id="uOg-aS-4Ru"/>
                                 </constraints>
                                 <string key="text">You can fork the Repository 
 github.com/yene/blockerList 
@@ -61,27 +61,37 @@ and add your own filters.</string>
                                 <rect key="frame" x="136" y="166" width="327" height="34"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Download and Install Repository"/>
+                                <state key="normal" title="Update from Repository"/>
                                 <connections>
                                     <action selector="update:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nw8-Ek-HBU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wyv-pO-YgW">
+                                <rect key="frame" x="255" y="550" width="89" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Report a Site"/>
+                                <connections>
+                                    <action selector="report:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hwx-Rt-KTp"/>
                                 </connections>
                             </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2ob-X9-Fck" firstAttribute="trailing" secondItem="eaf-j8-xC8" secondAttribute="trailing" id="6ps-cJ-mBW"/>
-                            <constraint firstItem="2ob-X9-Fck" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Zo-uJ-82C"/>
-                            <constraint firstItem="eaf-j8-xC8" firstAttribute="leading" secondItem="A6G-Qk-2hF" secondAttribute="leading" id="BHU-SQ-3mb"/>
-                            <constraint firstItem="A6G-Qk-2hF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IvE-pa-duG"/>
-                            <constraint firstItem="8RM-SG-IkU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LGD-5V-zM4"/>
-                            <constraint firstItem="eaf-j8-xC8" firstAttribute="top" secondItem="8RM-SG-IkU" secondAttribute="bottom" constant="8" symbolic="YES" id="P4x-wt-DsI"/>
-                            <constraint firstItem="A6G-Qk-2hF" firstAttribute="top" secondItem="eaf-j8-xC8" secondAttribute="bottom" constant="12" id="avb-JH-jgM"/>
-                            <constraint firstItem="Cls-OD-Uo5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ckg-de-9w5"/>
-                            <constraint firstItem="8RM-SG-IkU" firstAttribute="top" secondItem="2ob-X9-Fck" secondAttribute="bottom" constant="8" symbolic="YES" id="gvn-CG-Hhs"/>
-                            <constraint firstItem="2ob-X9-Fck" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="kwY-bf-oAK"/>
-                            <constraint firstAttribute="bottom" secondItem="Cls-OD-Uo5" secondAttribute="bottom" constant="20" symbolic="YES" id="l8l-lw-OPu"/>
-                            <constraint firstItem="eaf-j8-xC8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mLR-VF-VEX"/>
+                            <constraint firstAttribute="bottom" secondItem="Wyv-pO-YgW" secondAttribute="bottom" constant="20" symbolic="YES" id="00A-XH-jhD"/>
+                            <constraint firstItem="8RM-SG-IkU" firstAttribute="top" secondItem="2ob-X9-Fck" secondAttribute="bottom" constant="8" symbolic="YES" id="3Ke-tb-hI1"/>
+                            <constraint firstItem="eaf-j8-xC8" firstAttribute="centerX" secondItem="2ob-X9-Fck" secondAttribute="centerX" id="5WN-8K-kYg"/>
+                            <constraint firstItem="A6G-Qk-2hF" firstAttribute="trailing" secondItem="eaf-j8-xC8" secondAttribute="trailing" id="CZe-Wm-nn3"/>
+                            <constraint firstItem="2ob-X9-Fck" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="HdO-iW-0bp"/>
+                            <constraint firstItem="Wyv-pO-YgW" firstAttribute="centerX" secondItem="Cls-OD-Uo5" secondAttribute="centerX" id="Kak-VL-yif"/>
+                            <constraint firstItem="eaf-j8-xC8" firstAttribute="top" secondItem="8RM-SG-IkU" secondAttribute="bottom" constant="8" symbolic="YES" id="LRS-jP-NYp"/>
+                            <constraint firstItem="Cls-OD-Uo5" firstAttribute="top" secondItem="A6G-Qk-2hF" secondAttribute="bottom" constant="8" symbolic="YES" id="Nav-Ft-oZ5"/>
+                            <constraint firstItem="eaf-j8-xC8" firstAttribute="leading" secondItem="A6G-Qk-2hF" secondAttribute="leading" id="Q1E-Aa-JtP"/>
+                            <constraint firstItem="2ob-X9-Fck" firstAttribute="centerX" secondItem="8RM-SG-IkU" secondAttribute="centerX" id="Uh1-gu-mgP"/>
+                            <constraint firstItem="Cls-OD-Uo5" firstAttribute="centerX" secondItem="A6G-Qk-2hF" secondAttribute="centerX" id="ivT-cb-6ts"/>
+                            <constraint firstItem="A6G-Qk-2hF" firstAttribute="top" secondItem="eaf-j8-xC8" secondAttribute="bottom" constant="12" id="jBK-n9-y0X"/>
+                            <constraint firstItem="Cls-OD-Uo5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="koS-Rm-pZY"/>
+                            <constraint firstItem="eaf-j8-xC8" firstAttribute="trailing" secondItem="2ob-X9-Fck" secondAttribute="trailing" id="tiu-Xr-pin"/>
                         </constraints>
                     </view>
                     <connections>
