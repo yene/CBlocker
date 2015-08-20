@@ -10,7 +10,7 @@
 #import <MessageUI/MessageUI.h>
 
 @interface ViewController : UIViewController<MFMailComposeViewControllerDelegate>
-
++ (void)reloadExtension;
 
 @end
 

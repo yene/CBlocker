@@ -38,43 +38,60 @@
   NSString *source = self.sourceField.text;
   [[NSUserDefaults standardUserDefaults] setObject:source forKey:@"source"];
   
-  
-  source = [source stringByReplacingOccurrencesOfString:@"https://" withString:@""];
-  // Example Format: https://github.com/yene/spyfall/archive/master.zip
-  NSString *downloadZIP = [NSString stringWithFormat:@"https://%@/%@", source, @"archive/master.zip"]; // could have double // in name
+  if ([[source pathExtension] isEqualToString:@"json"]) {
+    // save json directly to the shared group folder for the extension
+    NSURL *url = [NSURL URLWithString:source];
+    [self downloadJSON:url];
+  } else if ([[source pathExtension] isEqualToString:@"zip"]) {
+    NSURL  *url = [NSURL URLWithString:source];
+    [self downloadZip:url];
+  } else if ([source containsString:@"https://github.com/"]) {
+    NSString *downloadZIP = [source stringByAppendingString:@"archive/master.zip"];
+    NSURL  *url = [NSURL URLWithString:downloadZIP];
+    [self downloadZip:url];
+  } else {
+    // TODO show error url not recoginsed
+  }
+
+}
+
+- (void)downloadJSON:(NSURL *)jsonURL {
+  dispatch_queue_t queue = dispatch_get_global_queue(0,0);
+  dispatch_async(queue, ^{
+    NSData *urlData = [NSData dataWithContentsOfURL:jsonURL];
+    if (urlData) {
+      NSURL *groupURL = [[NSFileManager defaultManager] containerURLForSecurityApplicationGroupIdentifier: @"group.com.yannickweiss.Content-Blocker"];
+      NSURL *blockerList = [groupURL URLByAppendingPathComponent:@"blockerList.json"];
+      [urlData writeToURL:blockerList atomically:YES];
+      [[self class] reloadExtension];
+    }
+  });
+}
+
+- (void)downloadZip:(NSURL *)zipURL {
   dispatch_queue_t queue = dispatch_get_global_queue(0,0);
   dispatch_async(queue, ^{
     // TODO: Better download code with more error reporting than this
-    
-    NSLog(@"Beginning download");
-    NSURL  *url = [NSURL URLWithString:downloadZIP];
-    NSData *urlData = [NSData dataWithContentsOfURL:url];
-    
-    //Find a cache directory. You could consider using documenets dir instead (depends on the data you are fetching)
-    NSLog(@"Got the data!");
+    NSData *urlData = [NSData dataWithContentsOfURL:zipURL];
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
     NSString *path = [paths objectAtIndex:0];
     
-    //Save the data
-    NSLog(@"Saving");
     NSString *zipPath = [path stringByAppendingPathComponent:@"blockerList.zip"];
     zipPath = [zipPath stringByStandardizingPath];
     [urlData writeToFile:zipPath atomically:YES];
     
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    BOOL zipExists = [fileManager fileExistsAtPath:zipPath];
+    BOOL zipExists = [[NSFileManager defaultManager] fileExistsAtPath:zipPath];
     if (zipExists) {
-      
       NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
       NSString *documentsDirectory = [paths objectAtIndex:0];
       NSString *targetPath = [documentsDirectory stringByAppendingPathComponent:@"/blockerList"];
       
-      // delete exisiting folder
-      [fileManager removeItemAtPath:targetPath error:nil];
+      // delete existing folder
+      [[NSFileManager defaultManager] removeItemAtPath:targetPath error:nil];
       
       // unpack
       [SSZipArchive unzipFileAtPath:zipPath toDestination:targetPath];
-
+      
       // generate blocklist json
       [AppDelegate generateBlockerListJSON];
       
@@ -82,19 +99,23 @@
     } else {
       NSLog(@"could not download ZIP");
     }
-
     
-    [SFContentBlockerManager reloadContentBlockerWithIdentifier:@"com.yannickweiss.Content-Blocker.Extension" completionHandler:^(NSError *error) {
-      if (error != nil) {
-        NSLog(@"Error: %@", error.localizedDescription);
-      } else {
-        NSLog(@"reloaded content blocker");
-      }
-    }];
+    [[self class] reloadExtension];
     
   });
-  
+
 }
+
++ (void)reloadExtension {
+  [SFContentBlockerManager reloadContentBlockerWithIdentifier:@"com.yannickweiss.Content-Blocker.Extension" completionHandler:^(NSError *error) {
+    if (error != nil) {
+      NSLog(@"Error: %@", error.localizedDescription);
+    } else {
+      NSLog(@"reloaded content blocker");
+    }
+  }];
+}
+
 
 - (void)viewDidLoad {
   [super viewDidLoad];
