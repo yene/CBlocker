@@ -21,12 +21,15 @@ You can use this JSON file as source and it will block all external scripts. [bl
 - [ ] remove duplicates in blockList
 - [X] add icons and artwork
 - [ ] add blockerList as submodule
-- [ ] Rename content blocker to something better
+- [ ] Rename content blocker to something better: CBlocker
 - [ ] show a spinner
+- [ ] on first launch show message that you have to enable it in the settings, maybe open settings directly
+- [ ] replace all NSLog with error message
 
 ## Maybe Later
 - [ ] inform user that there is an update in the github repo (notification?)
 - [X] add support for direct download of json and zip
+- [ ] block external font hoster? maybe use font tag.tt
 
 ## Questions
 * Do i have to toggle the settings or is reload enough? calling reload is enough
@@ -43,6 +46,7 @@ You can use this JSON file as source and it will block all external scripts. [bl
 ## Example Sites with many Ads
 * macrumors.com
 * imore.com
+* washingtonpost.com
 
 ## Original Repository
 https://github.com/yene/Content-Blocker
