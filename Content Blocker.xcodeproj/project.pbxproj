@@ -13,7 +13,6 @@
 		AE2628391B7F5AA9001DDF06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE2628371B7F5AA9001DDF06 /* Main.storyboard */; };
 		AE26283B1B7F5AA9001DDF06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE26283A1B7F5AA9001DDF06 /* Assets.xcassets */; };
 		AE26283E1B7F5AA9001DDF06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE26283C1B7F5AA9001DDF06 /* LaunchScreen.storyboard */; };
-		AE2628491B7F5AA9001DDF06 /* Content_BlockerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AE2628481B7F5AA9001DDF06 /* Content_BlockerTests.m */; };
 		AE26285B1B7F5C44001DDF06 /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = AE26285A1B7F5C44001DDF06 /* blockerList.json */; };
 		AE26285E1B7F5C44001DDF06 /* ActionRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = AE26285D1B7F5C44001DDF06 /* ActionRequestHandler.m */; };
 		AE2628621B7F5C44001DDF06 /* Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = AE2628581B7F5C44001DDF06 /* Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -30,13 +29,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		AE2628451B7F5AA9001DDF06 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AE2628231B7F5AA9001DDF06 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AE26282A1B7F5AA9001DDF06;
-			remoteInfo = "Content Blocker";
-		};
 		AE2628601B7F5C44001DDF06 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AE2628231B7F5AA9001DDF06 /* Project object */;
@@ -71,9 +63,6 @@
 		AE26283A1B7F5AA9001DDF06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE26283D1B7F5AA9001DDF06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE26283F1B7F5AA9001DDF06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AE2628441B7F5AA9001DDF06 /* Content BlockerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Content BlockerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE2628481B7F5AA9001DDF06 /* Content_BlockerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Content_BlockerTests.m; sourceTree = "<group>"; };
-		AE26284A1B7F5AA9001DDF06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE2628531B7F5B87001DDF06 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		AE2628581B7F5C44001DDF06 /* Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Extension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE26285A1B7F5C44001DDF06 /* blockerList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = blockerList.json; sourceTree = "<group>"; };
@@ -113,13 +102,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AE2628411B7F5AA9001DDF06 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		AE2628551B7F5C44001DDF06 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -135,7 +117,6 @@
 			children = (
 				AE2628531B7F5B87001DDF06 /* README.md */,
 				AE26282D1B7F5AA9001DDF06 /* Content Blocker */,
-				AE2628471B7F5AA9001DDF06 /* Content BlockerTests */,
 				AE2628591B7F5C44001DDF06 /* Extension */,
 				AE26282C1B7F5AA9001DDF06 /* Products */,
 			);
@@ -145,7 +126,6 @@
 			isa = PBXGroup;
 			children = (
 				AE26282B1B7F5AA9001DDF06 /* Content Blocker.app */,
-				AE2628441B7F5AA9001DDF06 /* Content BlockerTests.xctest */,
 				AE2628581B7F5C44001DDF06 /* Extension.appex */,
 			);
 			name = Products;
@@ -183,15 +163,6 @@
 				AE26282F1B7F5AA9001DDF06 /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		AE2628471B7F5AA9001DDF06 /* Content BlockerTests */ = {
-			isa = PBXGroup;
-			children = (
-				AE2628481B7F5AA9001DDF06 /* Content_BlockerTests.m */,
-				AE26284A1B7F5AA9001DDF06 /* Info.plist */,
-			);
-			path = "Content BlockerTests";
 			sourceTree = "<group>";
 		};
 		AE2628591B7F5C44001DDF06 /* Extension */ = {
@@ -244,24 +215,6 @@
 			productReference = AE26282B1B7F5AA9001DDF06 /* Content Blocker.app */;
 			productType = "com.apple.product-type.application";
 		};
-		AE2628431B7F5AA9001DDF06 /* Content BlockerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AE2628501B7F5AA9001DDF06 /* Build configuration list for PBXNativeTarget "Content BlockerTests" */;
-			buildPhases = (
-				AE2628401B7F5AA9001DDF06 /* Sources */,
-				AE2628411B7F5AA9001DDF06 /* Frameworks */,
-				AE2628421B7F5AA9001DDF06 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AE2628461B7F5AA9001DDF06 /* PBXTargetDependency */,
-			);
-			name = "Content BlockerTests";
-			productName = "Content BlockerTests";
-			productReference = AE2628441B7F5AA9001DDF06 /* Content BlockerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		AE2628571B7F5C44001DDF06 /* Extension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AE2628631B7F5C44001DDF06 /* Build configuration list for PBXNativeTarget "Extension" */;
@@ -297,10 +250,6 @@
 							};
 						};
 					};
-					AE2628431B7F5AA9001DDF06 = {
-						CreatedOnToolsVersion = 7.0;
-						TestTargetID = AE26282A1B7F5AA9001DDF06;
-					};
 					AE2628571B7F5C44001DDF06 = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = NDJHDNKXD6;
@@ -326,7 +275,6 @@
 			projectRoot = "";
 			targets = (
 				AE26282A1B7F5AA9001DDF06 /* Content Blocker */,
-				AE2628431B7F5AA9001DDF06 /* Content BlockerTests */,
 				AE2628571B7F5C44001DDF06 /* Extension */,
 			);
 		};
@@ -341,13 +289,6 @@
 				AE26286B1B7F67FA001DDF06 /* blockerList in Resources */,
 				AE26283B1B7F5AA9001DDF06 /* Assets.xcassets in Resources */,
 				AE2628391B7F5AA9001DDF06 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AE2628421B7F5AA9001DDF06 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,14 +318,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AE2628401B7F5AA9001DDF06 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AE2628491B7F5AA9001DDF06 /* Content_BlockerTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		AE2628541B7F5C44001DDF06 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -396,11 +329,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		AE2628461B7F5AA9001DDF06 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AE26282A1B7F5AA9001DDF06 /* Content Blocker */;
-			targetProxy = AE2628451B7F5AA9001DDF06 /* PBXContainerItemProxy */;
-		};
 		AE2628611B7F5C44001DDF06 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = AE2628571B7F5C44001DDF06 /* Extension */;
@@ -538,30 +466,6 @@
 			};
 			name = Release;
 		};
-		AE2628511B7F5AA9001DDF06 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = "Content BlockerTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yannickweiss.Content-BlockerTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Content Blocker.app/Content Blocker";
-			};
-			name = Debug;
-		};
-		AE2628521B7F5AA9001DDF06 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = "Content BlockerTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yannickweiss.Content-BlockerTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Content Blocker.app/Content Blocker";
-			};
-			name = Release;
-		};
 		AE2628641B7F5C44001DDF06 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -609,15 +513,6 @@
 			buildConfigurations = (
 				AE26284E1B7F5AA9001DDF06 /* Debug */,
 				AE26284F1B7F5AA9001DDF06 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AE2628501B7F5AA9001DDF06 /* Build configuration list for PBXNativeTarget "Content BlockerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AE2628511B7F5AA9001DDF06 /* Debug */,
-				AE2628521B7F5AA9001DDF06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
