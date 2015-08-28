@@ -53,7 +53,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		AE26282B1B7F5AA9001DDF06 /* Content Blocker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Content Blocker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE26282B1B7F5AA9001DDF06 /* CBlocker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CBlocker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE26282F1B7F5AA9001DDF06 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AE2628311B7F5AA9001DDF06 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AE2628321B7F5AA9001DDF06 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -125,7 +125,7 @@
 		AE26282C1B7F5AA9001DDF06 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AE26282B1B7F5AA9001DDF06 /* Content Blocker.app */,
+				AE26282B1B7F5AA9001DDF06 /* CBlocker.app */,
 				AE2628581B7F5C44001DDF06 /* Extension.appex */,
 			);
 			name = Products;
@@ -196,9 +196,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AE26282A1B7F5AA9001DDF06 /* Content Blocker */ = {
+		AE26282A1B7F5AA9001DDF06 /* CBlocker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AE26284D1B7F5AA9001DDF06 /* Build configuration list for PBXNativeTarget "Content Blocker" */;
+			buildConfigurationList = AE26284D1B7F5AA9001DDF06 /* Build configuration list for PBXNativeTarget "CBlocker" */;
 			buildPhases = (
 				AE2628271B7F5AA9001DDF06 /* Sources */,
 				AE2628281B7F5AA9001DDF06 /* Frameworks */,
@@ -210,9 +210,9 @@
 			dependencies = (
 				AE2628611B7F5C44001DDF06 /* PBXTargetDependency */,
 			);
-			name = "Content Blocker";
+			name = CBlocker;
 			productName = "Content Blocker";
-			productReference = AE26282B1B7F5AA9001DDF06 /* Content Blocker.app */;
+			productReference = AE26282B1B7F5AA9001DDF06 /* CBlocker.app */;
 			productType = "com.apple.product-type.application";
 		};
 		AE2628571B7F5C44001DDF06 /* Extension */ = {
@@ -261,7 +261,7 @@
 					};
 				};
 			};
-			buildConfigurationList = AE2628261B7F5AA9001DDF06 /* Build configuration list for PBXProject "Content Blocker" */;
+			buildConfigurationList = AE2628261B7F5AA9001DDF06 /* Build configuration list for PBXProject "CBlocker" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -274,7 +274,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AE26282A1B7F5AA9001DDF06 /* Content Blocker */,
+				AE26282A1B7F5AA9001DDF06 /* CBlocker */,
 				AE2628571B7F5C44001DDF06 /* Extension */,
 			);
 		};
@@ -446,7 +446,7 @@
 				INFOPLIST_FILE = "Content Blocker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yannickweiss.Content-Blocker";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CBlocker;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -461,7 +461,7 @@
 				INFOPLIST_FILE = "Content Blocker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yannickweiss.Content-Blocker";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CBlocker;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
@@ -499,7 +499,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AE2628261B7F5AA9001DDF06 /* Build configuration list for PBXProject "Content Blocker" */ = {
+		AE2628261B7F5AA9001DDF06 /* Build configuration list for PBXProject "CBlocker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AE26284B1B7F5AA9001DDF06 /* Debug */,
@@ -508,7 +508,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AE26284D1B7F5AA9001DDF06 /* Build configuration list for PBXNativeTarget "Content Blocker" */ = {
+		AE26284D1B7F5AA9001DDF06 /* Build configuration list for PBXNativeTarget "CBlocker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AE26284E1B7F5AA9001DDF06 /* Debug */,

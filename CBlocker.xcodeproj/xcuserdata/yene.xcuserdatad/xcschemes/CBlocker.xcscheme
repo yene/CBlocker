@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AE26282A1B7F5AA9001DDF06"
-               BuildableName = "Content Blocker.app"
-               BlueprintName = "Content Blocker"
-               ReferencedContainer = "container:Content Blocker.xcodeproj">
+               BuildableName = "CBlocker.app"
+               BlueprintName = "CBlocker"
+               ReferencedContainer = "container:CBlocker.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,24 +28,14 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AE2628431B7F5AA9001DDF06"
-               BuildableName = "Content BlockerTests.xctest"
-               BlueprintName = "Content BlockerTests"
-               ReferencedContainer = "container:Content Blocker.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AE26282A1B7F5AA9001DDF06"
-            BuildableName = "Content Blocker.app"
-            BlueprintName = "Content Blocker"
-            ReferencedContainer = "container:Content Blocker.xcodeproj">
+            BuildableName = "CBlocker.app"
+            BlueprintName = "CBlocker"
+            ReferencedContainer = "container:CBlocker.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -66,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AE26282A1B7F5AA9001DDF06"
-            BuildableName = "Content Blocker.app"
-            BlueprintName = "Content Blocker"
-            ReferencedContainer = "container:Content Blocker.xcodeproj">
+            BuildableName = "CBlocker.app"
+            BlueprintName = "CBlocker"
+            ReferencedContainer = "container:CBlocker.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -85,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AE26282A1B7F5AA9001DDF06"
-            BuildableName = "Content Blocker.app"
-            BlueprintName = "Content Blocker"
-            ReferencedContainer = "container:Content Blocker.xcodeproj">
+            BuildableName = "CBlocker.app"
+            BlueprintName = "CBlocker"
+            ReferencedContainer = "container:CBlocker.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -49,4 +49,4 @@ You can use this JSON file as source and it will block all external scripts. [bl
 * washingtonpost.com
 
 ## Original Repository
-https://github.com/yene/Content-Blocker
+https://github.com/yene/CBlocker

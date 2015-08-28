@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "1324485AEF61883E1A7F3F97DA8F9A8FF495CB2E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "A7249C40A1F2D236D2A1F31E82A41084644BEC21" : 0,
+    "1324485AEF61883E1A7F3F97DA8F9A8FF495CB2E" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "CA086880-A713-4F3B-8696-8C8D4D2387EE",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "A7249C40A1F2D236D2A1F31E82A41084644BEC21" : "CBlocker\/blockerList\/",
+    "1324485AEF61883E1A7F3F97DA8F9A8FF495CB2E" : "CBlocker\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "CBlocker",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "CBlocker.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:yene\/Content-Blocker.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1324485AEF61883E1A7F3F97DA8F9A8FF495CB2E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:yene\/blockerList.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A7249C40A1F2D236D2A1F31E82A41084644BEC21"
+    }
+  ]
+}

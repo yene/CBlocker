@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Content Blocker.xcodeproj">
+      location = "self:/Users/yene/Developer/iOS/CBlocker/CBlocker.xcodeproj">
    </FileRef>
 </Workspace>
