@@ -4,7 +4,7 @@
 <dict>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.com.yannickweiss.Content-Blocker</string>
+		<string>group.com.yannickweiss.CBlocker</string>
 	</array>
 </dict>
 </plist>

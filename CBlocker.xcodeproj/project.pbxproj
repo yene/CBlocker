@@ -445,7 +445,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Content Blocker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yannickweiss.Content-Blocker";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yannickweiss.CBlocker;
 				PRODUCT_NAME = CBlocker;
 				PROVISIONING_PROFILE = "";
 			};
@@ -460,7 +460,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Content Blocker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yannickweiss.Content-Blocker";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yannickweiss.CBlocker;
 				PRODUCT_NAME = CBlocker;
 				PROVISIONING_PROFILE = "";
 			};
@@ -474,7 +474,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Extension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yannickweiss.Content-Blocker.Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yannickweiss.CBlocker.Extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
@@ -489,7 +489,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Extension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yannickweiss.Content-Blocker.Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yannickweiss.CBlocker.Extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;

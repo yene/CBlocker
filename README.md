@@ -1,4 +1,4 @@
-# Content Blocker for iOS
+# CBlocker for iOS
 This app lets you use your own filter list (called blockerList.json) in Safari. You can fork and extend [https://github.com/yene/blockerList](https://github.com/yene/blockerList). Don't forget to enable the Content Blocker inside Safaris settings.
 
 ![screenshot](screenshots/v2.png)![settings](screenshots/settings.png)
