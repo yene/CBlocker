@@ -124,14 +124,18 @@
                                                      options:NSJSONWritingPrettyPrinted
                                                        error:&jsonWriteError];
   if (!jsonData) {
-    NSLog(@"Error writing generated JSON: %@", jsonWriteError.localizedDescription);
+    NSLog(@"JSON Error: %@", jsonWriteError.localizedDescription);
   } else {
     // save the json file to the shared group directory
     NSURL *groupURL = [[NSFileManager defaultManager]
                        containerURLForSecurityApplicationGroupIdentifier:
-                       @"group.com.yannickweiss.Content-Blocker"];
+                       @"group.com.yannickweiss.CBlocker"];
     NSURL *blockerList = [groupURL URLByAppendingPathComponent:@"blockerList.json"];
-    [jsonData writeToURL:blockerList atomically:YES];
+    BOOL result = [jsonData writeToURL:blockerList atomically:YES];
+    if (!result) {
+      NSLog(@"Could not write JSON to shared folder.");
+    }
+    
   }
   
 }

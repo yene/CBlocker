@@ -18,7 +18,7 @@
   // grab the json file from the shared group directory
   NSURL *groupURL = [[NSFileManager defaultManager]
                      containerURLForSecurityApplicationGroupIdentifier:
-                     @"group.com.yannickweiss.Content-Blocker"];
+                     @"group.com.yannickweiss.CBlocker"];
   NSURL *blockerList = [groupURL URLByAppendingPathComponent:@"blockerList.json"];
   
   NSItemProvider *attachment = [[NSItemProvider alloc] initWithContentsOfURL:blockerList];

@@ -61,7 +61,7 @@
   dispatch_async(queue, ^{
     NSData *urlData = [NSData dataWithContentsOfURL:jsonURL];
     if (urlData) {
-      NSURL *groupURL = [[NSFileManager defaultManager] containerURLForSecurityApplicationGroupIdentifier: @"group.com.yannickweiss.Content-Blocker"];
+      NSURL *groupURL = [[NSFileManager defaultManager] containerURLForSecurityApplicationGroupIdentifier: @"group.com.yannickweiss.CBlocker"];
       NSURL *blockerList = [groupURL URLByAppendingPathComponent:@"blockerList.json"];
       [urlData writeToURL:blockerList atomically:YES];
       [[self class] reloadExtension];
@@ -128,7 +128,7 @@
 }
 
 + (void)reloadExtension {
-  [SFContentBlockerManager reloadContentBlockerWithIdentifier:@"com.yannickweiss.Content-Blocker.Extension" completionHandler:^(NSError *error) {
+  [SFContentBlockerManager reloadContentBlockerWithIdentifier:@"com.yannickweiss.CBlocker.Extension" completionHandler:^(NSError *error) {
     if (error != nil) {
       NSLog(@"Error: %@", error.localizedDescription);
     } else {
